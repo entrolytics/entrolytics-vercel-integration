@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel-integration.json",
+  "name": "Entrolytics",
+  "slug": "entrolytics",
+  "description": "First-party growth analytics for the edge. Track visitors, page views, links, and conversions with sub-50ms latency.",
+  "logo": "https://ng.entrolytics.click/logo.png",
+  "website": "https://ng.entrolytics.click",
+  "installationType": "marketplace",
+  "oauth": {
+    "scopes": ["read-user", "read-deployments", "read-projects", "write-env-vars"]
+  },
+  "features": {
+    "buildEnv": true,
+    "runtimeEnv": true
+  },
+  "resources": [
+    {
+      "type": "database",
+      "name": "analytics",
+      "description": "Entrolytics analytics data"
+    }
+  ],
+  "configurationRequired": true,
+  "cta": "Add Analytics",
+  "categories": ["analytics", "monitoring"]
+}
