@@ -1,6 +1,75 @@
-# Entrolytics Vercel Marketplace Integration
+<div align="center">
+  <img src="https://raw.githubusercontent.com/entrolytics/.github/main/media/entrov2.png" alt="Entrolytics" width="64" height="64">
 
-One-click analytics setup for Vercel projects via the Vercel Marketplace.
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  [![Vercel](https://img.shields.io/badge/Vercel-Marketplace-000000.svg?logo=vercel)](https://vercel.com/integrations)
+  [![Next.js](https://img.shields.io/badge/Next.js-15-000000.svg?logo=next.js)](https://nextjs.org/)
+
+</div>
+
+---
+
+## Overview
+
+**Entrolytics Vercel Integration** is the official Vercel Marketplace integration for Entrolytics - first-party growth analytics for the edge. One-click install with automatic environment configuration.
+
+**Why use this integration?**
+- One-click setup from Vercel Marketplace
+- Automatic environment variable injection
+- Resource management for analytics websites
+- Edge-optimized for sub-50ms response times
+
+## Key Features
+
+<table>
+<tr>
+<td width="50%">
+
+### Integration
+- One-click Marketplace install
+- Automatic env var configuration
+- Works in all environments
+- Resource management UI
+
+</td>
+<td width="50%">
+
+### Edge Optimization
+- Edge-to-edge communication
+- <50ms response times globally
+- Fast cold starts
+- Vercel Edge Network powered
+
+</td>
+</tr>
+</table>
+
+## Quick Start
+
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://api.iconify.design/lucide:download.svg?color=%236366f1" width="48"><br>
+<strong>1. Install</strong><br>
+Vercel Marketplace
+</td>
+<td align="center" width="25%">
+<img src="https://api.iconify.design/lucide:link.svg?color=%236366f1" width="48"><br>
+<strong>2. Connect</strong><br>
+Authorize with Vercel
+</td>
+<td align="center" width="25%">
+<img src="https://api.iconify.design/lucide:settings.svg?color=%236366f1" width="48"><br>
+<strong>3. Configure</strong><br>
+Create analytics resource
+</td>
+<td align="center" width="25%">
+<img src="https://api.iconify.design/lucide:bar-chart-3.svg?color=%236366f1" width="48"><br>
+<strong>4. Track</strong><br>
+View analytics in dashboard
+</td>
+</tr>
+</table>
 
 ## Features
 

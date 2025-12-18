@@ -1,26 +1,52 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel-integration.json",
-  "name": "Entrolytics",
-  "slug": "entrolytics",
-  "description": "First-party growth analytics for the edge. Track visitors, page views, links, and conversions with sub-50ms latency.",
-  "logo": "https://ng.entrolytics.click/logo.png",
-  "website": "https://ng.entrolytics.click",
-  "installationType": "marketplace",
-  "oauth": {
-    "scopes": ["read-user", "read-deployments", "read-projects", "write-env-vars"]
-  },
-  "features": {
-    "buildEnv": true,
-    "runtimeEnv": true
-  },
-  "resources": [
-    {
-      "type": "database",
-      "name": "analytics",
-      "description": "Entrolytics analytics data"
-    }
-  ],
-  "configurationRequired": true,
-  "cta": "Add Analytics",
-  "categories": ["analytics", "monitoring"]
+	"$schema": "https://openapi.vercel.sh/vercel-integration.json",
+	"name": "Entrolytics",
+	"slug": "entrolytics",
+	"description": "First-party growth analytics for the edge. Track visitors, page views, links, and conversions with sub-50ms latency.",
+	"logo": "https://ng.entrolytics.click/logo.png",
+	"website": "https://ng.entrolytics.click",
+	"installationType": "marketplace",
+	"oauth": {
+		"scopes": [
+			{
+				"name": "user",
+				"description": "Get information about the current user",
+				"permissions": "read"
+			},
+			{
+				"name": "project",
+				"description": "Access project details and settings",
+				"permissions": "read"
+			},
+			{
+				"name": "project-env-vars",
+				"description": "Create and manage integration-owned project environment variables",
+				"permissions": "read-write"
+			},
+			{
+				"name": "deployment",
+				"description": "Read deployments for tracking",
+				"permissions": "read"
+			},
+			{
+				"name": "integration-configuration",
+				"description": "Interact with the installation of this integration",
+				"permissions": "read-write"
+			}
+		]
+	},
+	"features": {
+		"buildEnv": true,
+		"runtimeEnv": true
+	},
+	"resources": [
+		{
+			"type": "database",
+			"name": "analytics",
+			"description": "Entrolytics analytics data"
+		}
+	],
+	"configurationRequired": true,
+	"cta": "Add Analytics",
+	"categories": ["analytics", "monitoring"]
 }

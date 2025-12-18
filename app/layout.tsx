@@ -1,21 +1,19 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Entrolytics - Vercel Integration',
-  description: 'One-click analytics setup for Vercel projects',
+	title: "Entrolytics - Vercel Integration",
+	description: "One-click analytics setup for Vercel projects",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className="bg-gray-50 min-h-screen">
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className="bg-gray-50 min-h-screen">{children}</body>
+		</html>
+	);
 }
