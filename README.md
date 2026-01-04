@@ -84,7 +84,7 @@ View analytics in dashboard
 2. Vercel calls our v1 API endpoints to provision the integration
 3. User creates an Entrolytics "resource" (analytics website)
 4. Environment variables are automatically injected:
-   - `NEXT_PUBLIC_ENTROLYTICS_NG_WEBSITE_ID` - Your website tracking ID
+   - `NEXT_PUBLIC_ENTROLYTICS_WEBSITE_ID` - Your website tracking ID
    - `NEXT_PUBLIC_ENTROLYTICS_HOST` - Entrolytics API URL
    - `NEXT_PUBLIC_ENTROLYTICS_ENDPOINT` - Collection endpoint (defaults to `/api/send-native` for edge optimization)
 
@@ -239,7 +239,7 @@ export default function RootLayout({ children }) {
       <head>
         <Script
           src={`${process.env.NEXT_PUBLIC_ENTROLYTICS_HOST}/script.js`}
-          data-website-id={process.env.NEXT_PUBLIC_ENTROLYTICS_NG_WEBSITE_ID}
+          data-website-id={process.env.NEXT_PUBLIC_ENTROLYTICS_WEBSITE_ID}
           strategy="afterInteractive"
         />
       </head>

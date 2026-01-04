@@ -91,7 +91,7 @@ export async function POST(request: NextRequest): Promise<Response> {
 		}
 
 		case "deployment.created": {
-			// Track deployment to entrolytics-ng
+			// Track deployment to entrolytics
 			console.log("[Webhook] Deployment created:", payload.deployment.id);
 			await trackDeployment(payload);
 			break;
@@ -118,7 +118,7 @@ export async function POST(request: NextRequest): Promise<Response> {
 }
 
 /**
- * Track deployment to entrolytics-ng
+ * Track deployment to entrolytics
  * Phase 2: Deployment Tracking
  */
 async function trackDeployment(payload: {
@@ -147,7 +147,7 @@ async function trackDeployment(payload: {
 			return;
 		}
 
-		const entrolyticsHost = config.host || "https://ng.entrolytics.click";
+		const entrolyticsHost = config.host || "https://entrolytics.click";
 		const deploymentPayload = {
 			website: config.websiteId,
 			deployId: payload.deployment.id,
@@ -173,7 +173,7 @@ async function trackDeployment(payload: {
 
 		if (response.ok) {
 			console.log(
-				"[Webhook] Deployment tracked to entrolytics-ng:",
+				"[Webhook] Deployment tracked to entrolytics:",
 				payload.deployment.id,
 			);
 		} else {

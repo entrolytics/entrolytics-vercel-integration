@@ -89,7 +89,7 @@ export default function DashboardPage() {
 						</div>
 						<div className="flex gap-3">
 							<a
-								href="https://ng.entrolytics.click"
+								href="https://entrolytics.click"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm"
@@ -350,7 +350,7 @@ export default function DashboardPage() {
 
 <Script
   src={\`\${process.env.NEXT_PUBLIC_ENTROLYTICS_HOST}/script.js\`}
-  data-website-id={process.env.NEXT_PUBLIC_ENTROLYTICS_NG_WEBSITE_ID}
+  data-website-id={process.env.NEXT_PUBLIC_ENTROLYTICS_WEBSITE_ID}
   strategy="afterInteractive"
 />`}
 										</pre>
@@ -411,7 +411,7 @@ export default function DashboardPage() {
 							</h3>
 							<div className="space-y-2 text-sm">
 								<div className="bg-gray-50 rounded p-2 font-mono text-xs">
-									NEXT_PUBLIC_ENTROLYTICS_NG_WEBSITE_ID
+									NEXT_PUBLIC_ENTROLYTICS_WEBSITE_ID
 								</div>
 								<div className="bg-gray-50 rounded p-2 font-mono text-xs">
 									NEXT_PUBLIC_ENTROLYTICS_HOST
