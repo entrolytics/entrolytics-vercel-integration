@@ -60,6 +60,7 @@ export type InstallIntegrationRequest = z.infer<
 export const resourceMetadataSchema = z.object({
 	websiteId: z.string().optional(),
 	domain: z.string().optional(),
+	projectId: z.string().optional(),
 });
 
 export const provisionResourceRequestSchema = z.object({

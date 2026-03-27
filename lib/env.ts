@@ -7,15 +7,17 @@ const envSchema = z.object({
 	ENTROLYTICS_INTEGRATION_SECRET: z.string().min(1),
 });
 
+type ProcessLike = {
+	env?: Record<string, string | undefined>;
+};
+
 // Edge-compatible environment variable access
 // In edge runtime, process.env is available but we handle it safely
 function getEnv(key: string): string | undefined {
-	// @ts-expect-error - process.env is available in both Node.js and edge runtime
-	if (typeof process !== "undefined" && process.env) {
-		// @ts-expect-error
-		return process.env[key];
-	}
-	return undefined;
+	const processRef = (
+		globalThis as typeof globalThis & { process?: ProcessLike }
+	).process;
+	return processRef?.env?.[key];
 }
 
 // Lazy validation - only validate when env is accessed, not at module evaluation

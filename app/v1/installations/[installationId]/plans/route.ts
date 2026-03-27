@@ -10,6 +10,6 @@ export const runtime = "edge";
  * Get available billing plans for this installation
  */
 export const GET = withAuth(async () => {
-	const plans = getAllBillingPlans();
-	return NextResponse.json(plans);
+  const plans = getAllBillingPlans();
+  return NextResponse.json(plans);
 });

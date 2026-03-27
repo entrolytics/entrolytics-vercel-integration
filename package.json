@@ -1,42 +1,48 @@
 {
-	"name": "@entrolytics/vercel-integration",
-	"version": "2.1.0",
-	"private": true,
-	"description": "Vercel integration for Entrolytics - First-party growth analytics for the edge",
-	"keywords": [
-		"entrolytics",
-		"vercel",
-		"marketplace",
-		"integration",
-		"analytics"
-	],
-	"license": "MIT",
-	"author": "Entrolytics <hey@entrolytics.click>",
-	"type": "module",
-	"scripts": {
-		"dev": "next dev -p 3001",
-		"build": "next build",
-		"start": "next start",
-		"lint": "biome check --write ."
-	},
-	"dependencies": {
-		"@vercel/kv": "^3.0.0",
-		"jose": "^6.1.3",
-		"nanoid": "^5.1.6",
-		"next": "^16.1.1",
-		"react": "^19.2.3",
-		"react-dom": "^19.2.3",
-		"zod": "^4.3.5"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.3.11",
-		"@tailwindcss/postcss": "^4.1.18",
-		"@types/node": "^25.0.3",
-		"@types/react": "^19.2.7",
-		"@types/react-dom": "^19.2.3",
-		"autoprefixer": "^10.4.23",
-		"postcss": "^8.5.6",
-		"tailwindcss": "^4.1.18",
-		"typescript": "^5.9.3"
-	}
+  "name": "@entrolytics/vercel-integration",
+  "version": "2.2.0",
+  "private": true,
+  "description": "Vercel integration for Entrolytics - First-party growth analytics for the edge",
+  "keywords": [
+    "analytics",
+    "entrolytics",
+    "integration",
+    "marketplace",
+    "vercel"
+  ],
+  "license": "MIT",
+  "author": "Entrolytics <hey@entrolytics.click>",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint --fix . && oxfmt --write .",
+    "lint:check": "oxlint . && oxfmt --check .",
+    "lint:fix-unsafe": "oxlint -f stylish --import-plugin --type-aware --type-check --vitest-plugin --fix --fix-suggestions --fix-dangerously src/",
+    "format": "oxfmt --write .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.37.0",
+    "jose": "^6.2.2",
+    "nanoid": "^5.1.7",
+    "next": "^16.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.27",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2"
+  },
+  "packageManager": "pnpm@10.33.0"
 }

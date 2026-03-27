@@ -177,7 +177,7 @@ export async function provisionResource(
 					},
 					{
 						key: "NEXT_PUBLIC_ENTROLYTICS_ENDPOINT",
-						value: "/api/send-native",
+						value: "/collect",
 						target: ["production", "preview", "development"],
 					},
 				],
@@ -208,7 +208,7 @@ export async function provisionResource(
 			},
 			{
 				name: "NEXT_PUBLIC_ENTROLYTICS_ENDPOINT",
-				value: "/api/send-native",
+				value: "/collect",
 			},
 		],
 	};
