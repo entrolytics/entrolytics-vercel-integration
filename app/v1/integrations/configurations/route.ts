@@ -6,9 +6,6 @@ import { withAuth } from "@/lib/auth";
 import { getInstallation } from "@/lib/partner";
 import { getAccountInfo } from "@/lib/vercel-api";
 
-// Enable edge runtime for ultra-low latency
-export const runtime = "edge";
-
 /**
  * GET /v1/integrations/configurations
  * List all integration configurations for the authenticated user/team

@@ -2,9 +2,6 @@ import { type NextRequest, NextResponse } from "next/server";
 import { env } from "@/lib/env";
 import { storeAccessToken } from "@/lib/vercel-api";
 
-// Enable edge runtime for ultra-low latency
-export const runtime = "edge";
-
 /**
  * GET /callback
  * OAuth callback - exchanges code for access token

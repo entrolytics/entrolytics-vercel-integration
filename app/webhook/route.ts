@@ -1,10 +1,9 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { API_ROUTES } from "@entrolytics/shared";
 import { env } from "@/lib/env";
 import { getInstallationConfig, storeWebhookEvent, uninstallInstallation } from "@/lib/partner";
 import { unknownWebhookEventSchema, type WebhookEvent, webhookEventSchema } from "@/lib/schemas";
 
-// Enable edge runtime for ultra-low latency
-export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 /**
@@ -104,9 +103,9 @@ async function trackDeployment(payload: {
       return;
     }
 
-    const entrolyticsHost = config.host || "https://entrolytics.click";
+    const entrolyticsHost = config.host || "https://api.entrolytics.click";
     const deploymentPayload = {
-      website: config.websiteId,
+      websiteId: config.websiteId,
       deployId: payload.deployment.id,
       gitSha: payload.deployment.meta?.githubCommitSha,
       gitBranch: payload.deployment.meta?.githubCommitRef,
@@ -114,17 +113,14 @@ async function trackDeployment(payload: {
       source: "vercel",
     };
 
-    const response = await fetch(
-      `${entrolyticsHost}/api/websites/${config.websiteId}/deployments`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${config.apiKey}`,
-        },
-        body: JSON.stringify(deploymentPayload),
+    const response = await fetch(`${entrolyticsHost}${API_ROUTES.deployments}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": config.apiKey,
       },
-    );
+      body: JSON.stringify(deploymentPayload),
+    });
 
     if (response.ok) {
       console.log("[Webhook] Deployment tracked to entrolytics:", payload.deployment.id);

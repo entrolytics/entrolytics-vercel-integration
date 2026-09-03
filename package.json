@@ -1,6 +1,6 @@
 {
   "name": "@entrolytics/vercel-integration",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": true,
   "description": "Vercel integration for Entrolytics - First-party growth analytics for the edge",
   "keywords": [
@@ -16,33 +16,37 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
+    "check": "pnpm lint:check && pnpm typecheck",
     "start": "next start",
-    "lint": "oxlint --fix . && oxfmt --write .",
-    "lint:check": "oxlint . && oxfmt --check .",
-    "lint:fix-unsafe": "oxlint -f stylish --import-plugin --type-aware --type-check --vitest-plugin --fix --fix-suggestions --fix-dangerously src/",
+    "lint": "oxlint --fix app lib && oxfmt --write app lib package.json next.config.mjs postcss.config.cjs tailwind.config.ts tsconfig.json global.d.ts integration.json vercel.json",
+    "lint:check": "oxlint app lib && oxfmt --check app lib package.json next.config.mjs postcss.config.cjs tailwind.config.ts tsconfig.json global.d.ts integration.json vercel.json",
+    "lint:fix-unsafe": "oxlint -f stylish --import-plugin --type-aware --type-check --vitest-plugin --fix --fix-suggestions --fix-dangerously app lib",
     "format": "oxfmt --write .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@upstash/redis": "^1.37.0",
-    "jose": "^6.2.2",
-    "nanoid": "^5.1.7",
-    "next": "^16.2.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "zod": "^4.3.6"
+    "@entrolytics/shared": "2.4.2",
+    "@upstash/redis": "^1.38.2",
+    "jose": "^6.2.8",
+    "nanoid": "^6.0.1",
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.2",
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "autoprefixer": "^10.4.27",
-    "oxfmt": "^0.42.0",
-    "oxlint": "^1.57.0",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2"
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "autoprefixer": "^10.5.4",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@11.21.0"
 }

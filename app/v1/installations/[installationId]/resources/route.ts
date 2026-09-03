@@ -3,9 +3,6 @@ import { readRequestBodyWithSchema, withAuth } from "@/lib/auth";
 import { listResources, provisionResource } from "@/lib/partner";
 import { provisionResourceRequestSchema } from "@/lib/schemas";
 
-// Enable edge runtime for ultra-low latency
-export const runtime = "edge";
-
 /**
  * GET /v1/installations/[installationId]/resources
  * List all resources (websites) for this installation

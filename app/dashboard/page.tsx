@@ -22,7 +22,7 @@ function DashboardContent() {
 
   useEffect(() => {
     if (configurationId) {
-      loadDashboardData();
+      void loadDashboardData();
     }
   }, [configurationId]);
 

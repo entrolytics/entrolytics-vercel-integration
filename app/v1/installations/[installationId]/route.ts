@@ -8,9 +8,6 @@ import {
 } from "@/lib/partner";
 import { installIntegrationRequestSchema } from "@/lib/schemas";
 
-// Enable edge runtime for ultra-low latency
-export const runtime = "edge";
-
 /**
  * PUT /v1/installations/[installationId]
  * Called by Vercel when user installs the integration
