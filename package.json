@@ -1,6 +1,6 @@
 {
   "name": "@entrolytics/vercel-integration",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "description": "Vercel integration for Entrolytics - First-party growth analytics for the edge",
   "keywords": [
@@ -26,7 +26,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@entrolytics/shared": "^3.0.0",
+    "@entrolytics/shared": "^3.0.1",
     "@upstash/redis": "^1.38.4",
     "jose": "^6.2.12",
     "nanoid": "^6.0.1",
