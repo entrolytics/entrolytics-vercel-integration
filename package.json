@@ -1,6 +1,6 @@
 {
   "name": "@entrolytics/vercel-integration",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "private": true,
   "description": "Vercel integration for Entrolytics - First-party growth analytics for the edge",
   "keywords": [
@@ -26,27 +26,27 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@entrolytics/shared": "2.4.2",
-    "@upstash/redis": "^1.38.2",
-    "jose": "^6.2.8",
+    "@entrolytics/shared": "^3.0.0",
+    "@upstash/redis": "^1.38.4",
+    "jose": "^6.2.12",
     "nanoid": "^6.0.1",
-    "next": "^16.3.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "zod": "^4.4.3"
+    "next": "^16.3.4",
+    "react": "canary",
+    "react-dom": "canary",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.5.0",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
-    "autoprefixer": "^10.5.4",
-    "oxfmt": "^0.63.0",
-    "oxlint": "^1.78.0",
-    "postcss": "^8.5.26",
+    "@types/react-dom": "^19.2.7",
+    "autoprefixer": "^10.5.5",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2",
-    "vitest": "^4.1.11"
+    "typescript": "next",
+    "vitest": "^5.0.0"
   },
-  "packageManager": "pnpm@11.21.0"
+  "packageManager": "pnpm@11.26.0"
 }
