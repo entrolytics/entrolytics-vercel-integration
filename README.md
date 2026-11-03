@@ -141,7 +141,7 @@ NEXT_PUBLIC_ENTROLYTICS_ENDPOINT=/api/collect  # Local proxy route (if you expos
 
 ### Prerequisites
 
-- Node.js 24.20.0+
+- Node.js 24.22.2+
 - pnpm
 - Vercel account with integration console access
 
@@ -193,7 +193,7 @@ For webhook testing, use [ngrok](https://ngrok.com/) or similar.
 
 ## Architecture
 
-```
+```tree
 integrations/vercel/
 ├── app/
 │   ├── v1/

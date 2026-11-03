@@ -3,8 +3,8 @@
   "name": "Entrolytics",
   "slug": "entrolytics",
   "description": "First-party growth analytics for the edge. Track visitors, page views, links, and conversions with sub-50ms latency.",
-  "logo": "https://entrolytics.click/logo.png",
-  "website": "https://entrolytics.click",
+  "logo": "https://entrolytics.dev/logo.png",
+  "website": "https://entrolytics.dev",
   "installationType": "marketplace",
   "oauth": {
     "scopes": [

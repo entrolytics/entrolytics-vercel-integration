@@ -103,7 +103,7 @@ async function trackDeployment(payload: {
       return;
     }
 
-    const entrolyticsHost = config.host || "https://api.entrolytics.click";
+    const entrolyticsHost = config.host || "https://api.entrolytics.dev";
     const deploymentPayload = {
       websiteId: config.websiteId,
       deployId: payload.deployment.id,

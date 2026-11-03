@@ -65,7 +65,7 @@ function DashboardContent() {
             </div>
             <div className="flex gap-3">
               <a
-                href="https://entrolytics.click"
+                href="https://entrolytics.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm"
@@ -73,7 +73,7 @@ function DashboardContent() {
                 View Analytics
               </a>
               <a
-                href="https://docs.entrolytics.click"
+                href="https://docs.entrolytics.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm"
@@ -384,7 +384,7 @@ function DashboardContent() {
               <h3 className="font-semibold text-gray-900 mb-4">Help & Resources</h3>
               <div className="space-y-3">
                 <a
-                  href="https://docs.entrolytics.click"
+                  href="https://docs.entrolytics.dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700"
@@ -415,7 +415,7 @@ function DashboardContent() {
                   GitHub
                 </a>
                 <a
-                  href="mailto:support@entrolytics.click"
+                  href="mailto:support@entrolytics.dev"
                   className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
