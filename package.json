@@ -41,9 +41,9 @@
     "@types/react": "^19.3.3",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.7.0",
-    "oxfmt": "^0.76.0",
-    "oxlint": "^1.91.0",
-    "postcss": "^8.5.32",
+    "oxfmt": "^0.80.0",
+    "oxlint": "^1.95.0",
+    "postcss": "^8.5.33",
     "tailwindcss": "^4.3.5",
     "typescript": "next",
     "vitest": "^5.1.2"
