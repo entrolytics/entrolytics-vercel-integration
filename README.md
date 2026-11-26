@@ -141,7 +141,7 @@ NEXT_PUBLIC_ENTROLYTICS_ENDPOINT=/api/collect  # Local proxy route (if you expos
 
 ### Prerequisites
 
-- Node.js 24.22.2+
+- Node.js 24.22.3+
 - pnpm
 - Vercel account with integration console access
 
